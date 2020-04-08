@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+<link rel="stylesheet" href="CSS/estilosboton.css">
+  </head>
+  <body>
+    <p>
+    <input id="in" type="submit" name="" value="Prueba de importar scripts">
+        </p>
+
+<div class="div1">
+  <h2>Menú</h2>
+<br><br><br>
+<a href="7Factorial.html">7Factorial</a><br><br><br>
+<a href="10Cadenaspalindoromo.html">10cadenaspalindromo</a><br><br><br>
+<a href="10CadenasPatronesvalida2RFC.html">10CadenasPatronesvalida2RFC</a><br><br><br>
+<a href="16multiplicarCalificaColor.html">16multiplicarCalificaColor</a><br><br><br>
+<a href="17fecha-signo.html">17fecha-signo</a><br><br><br>
+</div>
+
+<br>
+
+
+    <script>
+    // seleccionamos el enlace
+    var boton = document.getElementById("in");
+
+    // cuando se pulsa en el enlace
+    boton.onclick = function(e) {
+        // evitamos la acción por defecto
+        e.preventDefault();
+        // creamos una etiqueta script
+        var s = document.createElement("script");
+        // indicamos en el atributo src el fichero que quieres cargar
+        s.src = "js/codigo.js";
+        // lo añadimos al documento (y se ejecuta automaticamente)
+        document.querySelector("body").appendChild(s);
+        // borra el script del documento (para evitar basura si se ejecuta multiples veces)
+        s.remove();
+    }
+    </script>
+
+  </body>
+</html>

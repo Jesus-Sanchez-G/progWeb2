@@ -1,0 +1,39 @@
+<!DOCTYPE>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="PQG">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Control submit por evento formulario</title>
+<link rel="stylesheet" href="CSS/estilosboton.css">
+</head>
+<body>
+
+	<form><p>
+  <input id="in" type="submit" name="" value="Importar scripts">
+  </p>
+  <script>
+  // seleccionamos el enlace
+  var boton = document.getElementById("in");
+
+  // cuando se pulsa en el enlace
+  boton.onclick = function(e) {
+      // evitamos la acción por defecto
+      e.preventDefault();
+      // creamos una etiqueta script
+      var s = document.createElement("script");
+      // indicamos en el atributo src el fichero que quieres cargar
+      s.src = "js/10-2.js";
+      // lo añadimos al documento (y se ejecuta automaticamente)
+      document.querySelector("body").appendChild(s);
+      // borra el script del documento (para evitar basura si se ejecuta multiples veces)
+      s.remove();
+  }
+  </script>
+		RFC <input type="text" name="txtRFC" maxlength="13" size="15"/>
+		<br/>
+		<input type="submit" onClick="return valida(txtRFC);" value="Ok"/>
+	</form>
+</body>
+</html>

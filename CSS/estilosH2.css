@@ -1,0 +1,12 @@
+h2{
+  color: white;
+  background-color: #b11d5e;
+  border: 3px solid;
+  border-color: black;
+  width: 30%;
+  height: 15%;
+  padding: 15px;
+  text-align: center;
+  margin-left: 35%;
+  margin-top: 10%;
+}

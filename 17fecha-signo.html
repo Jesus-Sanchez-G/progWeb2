@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="CSS/estilosboton.css">
+  </head>
+  <body>
+    <p>Ingrese su fecha:</p>
+    <form class="" >
+      <input type="date(DD/MM/YYY)" name="txtFec" maxlength="10" size="12"/>
+      <input type="button" onClick="validaFechaMenor(txtFec);" value="Ok"/>
+
+    </form>
+    <p>
+    <input id="in" type="submit" name="" value="Importar scripts">
+    </p>
+    <script>
+    // seleccionamos el enlace
+    var boton = document.getElementById("in");
+
+    // cuando se pulsa en el enlace
+    boton.onclick = function(e) {
+        // evitamos la acción por defecto
+        e.preventDefault();
+        // creamos una etiqueta script
+        var s = document.createElement("script");
+        // indicamos en el atributo src el fichero que quieres cargar
+        s.src = "js/17.js";
+        // lo añadimos al documento (y se ejecuta automaticamente)
+        document.querySelector("body").appendChild(s);
+        // borra el script del documento (para evitar basura si se ejecuta multiples veces)
+        s.remove();
+    }
+    </script>
+
+
+  </body>
+</html>
